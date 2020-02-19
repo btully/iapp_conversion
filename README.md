@@ -79,7 +79,7 @@ optional arguments:
 This script will retrieve an iApp configuration from a Big-IP and outputs the information to a json file.
 ### Script Usage
 ```
-# ython export_iapp.py -h
+# python export_iapp.py -h
 usage: export_iapp.py [-h] --host HOST --username USERNAME --iapp IAPP
                       [--password PASSWORD]
 
