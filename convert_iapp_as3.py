@@ -572,9 +572,6 @@ def convert(conf):
             'value': { 'bigip': prepend_common(conf['vars']['conf__reqadaptprof']) }
         })
 
-
-    ######### STOPPED HERE AND NEED TO ADD MONITORS TO THE POOLS ##################
-
     #
     # HTTP PROFILE
     #
