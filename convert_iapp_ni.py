@@ -682,8 +682,8 @@ if __name__ == '__main__':
 
 
         # Start the API transaction and get the result
-        bigip.patch('https://10.1.1.131/mgmt/tm/transaction/%i' % transId, data=json.dumps({'state': 'VALIDATING'}))
-        transResult = bigip.get('https://10.1.1.131/mgmt/tm/transaction/%i' % transId).json()
+        bigip.patch('%s/transaction/%i' % (BIGIP_URL_BASE, transId), data=json.dumps({'state': 'VALIDATING'}))
+        transResult = bigip.get('%s/transaction/%i' % (BIGIP_URL_BASE, transId)).json()
         if transResult['state'] == 'FAILED':
             log.info('\tConverting iApp...Failed')
             failedList.append({'name': iAppName, 'reason': transResult['failureReason']})
